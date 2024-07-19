@@ -12,7 +12,6 @@ const Header = () => {
 
     const {width} = useWindowDimensions();
     const {isDarkMode,toggleTheme} = useContext(ThemeContext)
-    console.log('isdarkmodeis',isDarkMode)
 
   return (
     <div id="header" className='h-screen grid place-items-center place-content-top gap-4'>

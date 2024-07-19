@@ -19,7 +19,6 @@ const [data,setData] = useState<FormData>({
 })
 
  const [submit,submitting] = useFormspark({formId : 'tsYoM4nAT' })
- console.log('data is ',data,submit)
  const handleData = (e : any)=>{
     const name = e.target.name;
     const value = e.target.value;
@@ -33,7 +32,7 @@ const [data,setData] = useState<FormData>({
   return (
     <div id={Section.Contact} className='bg-gray-300 lg:my-8 lg:mx-12 flex flex-col lg:flex-row gap-12 min-h-screen place-content-center dark:text-white '>
   <form onSubmit={handleSubmit} className=' dark:text-white overflow-hidden text-black flex flex-col px-4 justify-center gap-6 w-full lg:w-3/5 '>
-    <h1 className='text-3xl lg:text-6xl text-center  bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] inline-block text-transparent bg-clip-text mt-4 mb-2 '>Let's Get In Touch</h1>
+    <h1 className='text-3xl lg:text-6xl text-center  bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] inline-block text-transparent bg-clip-text mt-4 mb-2 '>Let&apos;s Get In Touch</h1>
     <motion.input
       required  whileFocus={{ scale: 1.05 }} transition={{ duration: 0.3 }}
       className='py-2 px-4 mx-2 rounded-xl outline-none dark:bg-black focus:bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] transition-colors '
