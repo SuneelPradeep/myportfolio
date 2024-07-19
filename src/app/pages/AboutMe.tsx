@@ -22,10 +22,10 @@ const AboutMe = () => {
   <p>Hey there!</p>
 
   <p>
-    I'm Suneel Pradeep Setti, and as you might have already read, I'm a developer, photographer, singer etc.,. This website was created to showcase all of my skills and future plans. Don't judge my writing based on this section though,it's my shoddiest work yet and a work in progress.
+    I&apos;m Suneel Pradeep Setti, and as you might have already read, I&apos;m a developer, photographer, singer etc.,. This website was created to showcase all of my skills and future plans. Don&apos;t judge my writing based on this section though,it&apos;s my shoddiest work yet and a work in progress.
   </p>
   <p>
-    My fascination with computers led me to development. The way code transforms into something tangible and useful, like creating a simple variable <code>string name = "Suneel";</code> which holds my identity in a line of code, amazed me. Witnessing this magic turned my curiosity into a quest for innovation, exploring how sites like Amazon and Meta work.
+    My fascination with computers led me to development. The way code transforms into something tangible and useful, like creating a simple variable <code>string name = &quot;Suneel&quot;</code> which holds my identity in a line of code, amazed me. Witnessing this magic turned my curiosity into a quest for innovation, exploring how sites like Amazon and Meta work.
   </p>
   <p>
     Photography captivates me because it allows me to freeze real-life moments. Looking back at these pictures years later, I see how much has changed, and it brings a wave of nostalgia and fond memories.

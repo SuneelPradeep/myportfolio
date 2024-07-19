@@ -29,7 +29,7 @@ const PhotoWall : React.FC<Props> = ({size = 512,delay=0.8}) => {
         
     }
     sequence()
-    },[controls,photos.length,delay])
+    },[controls,delay])
 
   return (
     <div className='flex gap-1' style={{width :size,height:size}}>
