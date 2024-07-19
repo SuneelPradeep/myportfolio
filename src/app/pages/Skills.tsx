@@ -46,7 +46,7 @@ const Skills = () => {
                   
                 />
               </div>
-              <h1 className="mt-2 text-center">{i.name}</h1>
+              <h1 className="mt-2 text-center dark:text-white text-black">{i.name}</h1>
             </div>
           ))}
 

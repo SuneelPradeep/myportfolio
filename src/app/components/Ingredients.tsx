@@ -10,7 +10,7 @@ type FormatterChar = {
 const getFormattedTextArray = (): FormatterChar[] => {
   const formattedText = [
     { char: '<span class="text-blue-500">const </span>', delay: 0 },
-    { char: 'suneel: Array<', delay: 0 },
+    { char: '<span class="dark:text-white text-black">suneel: Array<</span>', delay: 0 },
     { char: '<span class="text-green-500">Ingredient</span>', delay: 0 },
     { char: '> ', delay: 0 },
     { char: '<span class="text-blue-500">= </span>', delay: 0 },
