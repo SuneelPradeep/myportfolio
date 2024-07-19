@@ -69,7 +69,7 @@ const Profiles :React.FC= () => {
       }
     }
     sequence()
- },[controls,profiles.length])
+ },[controls])
   return (
     <div className='h-[22px] flex gap-8 mt-6' >
   {profiles.map(({title,link,className, icon:Icon },index)=>(
