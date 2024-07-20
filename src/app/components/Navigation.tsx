@@ -25,14 +25,14 @@ const Navigation = () => {
   if(!isDesktop){
     return (
         <nav className='fixed min-h-screen flex flex-col gap-4 items-center justify-between top-0 px-3 py-5 '>
-           <Tippy content='Go to Top' placement='right'>
-           <div className='cursor-pointer grayscale hover:grayscale-0'>
+           <Tippy content={<p className='dark:text-white' ><small>Go to Top</small></p>}  placement='right'>
+           <div className='cursor-pointer grayscale hover:grayscale-0' onClick={goToTop}>
             <Image src='/logosmall2.png' width={32} height={32} alt='home' />
            </div>
     
            </Tippy>
-           <Tippy content='Toggle Theme' placement='right'>
-            <div onClick={toggleTheme} className='p-1 cursor hover:text-yellow-500 transition-colors'>{isDarkMode ? <FaMoon  /> : <FaSun />  }</div>
+           <Tippy content={<p className='dark:text-white' ><small>Toggle Theme</small></p>} placement='right'>
+            <div onClick={toggleTheme} className='p-1 cursor dark:text-white text-black hover:text-yellow-500 transition-colors'>{isDarkMode ? <FaMoon  /> : <FaSun />  }</div>
             </Tippy>
             </nav>
       )

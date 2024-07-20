@@ -4,6 +4,8 @@ import { skillicons } from '../data/skillsicons';
 import Image from 'next/image';
 import { motion} from "framer-motion" 
 import { Section } from '../types/Sections';
+import Heading from '../components/Heading';
+import sectionList from '../data/section';
 
 
 const Skills = () => {
@@ -15,7 +17,7 @@ const Skills = () => {
         x: {
           repeat: Infinity,
           repeatType: 'loop',
-          duration: 30, 
+          duration: 40, 
           ease: 'linear'
         }
       }
@@ -28,12 +30,12 @@ const Skills = () => {
  const allIcons = [...skillicons,...duplicatedIcons]
   return (
    <div id={Section.Skills} className=' my-[4rem] py-8 '>
-   <h1 className='mx-12 mb-12 prose dark:prose-invert text-3xl text-bold'> TECHNICAL SKILLS </h1>
+   <Heading icon={sectionList[Section.Skills].icon} title={sectionList[Section.Skills].title} /> 
     <div className=" border-t border-b border-gray-200 dark:border-gray-500  py-4 overflow-hidden">
     <motion.div 
-        animate="animate" className='flex space-x-8 items-center'
+        animate="animate" className='flex space-x-8 items-center w-[1200%] lg:w-[450%]  md:w-[650%]'
         variants={marqueeVariants}
-        style={{ width: '200%' }}
+       
       >     
         {allIcons.map((i, id) => (
             <div key={id} className="flex flex-col items-center">

@@ -20,14 +20,6 @@ const Header = () => {
          </NoSSR>
 
          <Image src='/logo2.png' width={550} height={140} alt='Suneel Pradeep' priority />
-          {/* <button  onClick={toggleTheme} > Click here to toggle </button> */}
-         {/* <h1 className='sr-only'>
-          Suneel Pradeep 
-          <br />
-          Developer, Designer, Photographer, Singer 
-          <br />
-          Visakhapatnam, New Delhi, India 
-         </h1> */}
          <Ingredients />
          <Profiles />
         </div>

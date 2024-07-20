@@ -3,6 +3,8 @@ import React, { useRef } from 'react'
 import {motion,useInView} from 'framer-motion'
 import { Section } from '../types/Sections'
 import Image from 'next/image'
+import Heading from '../components/Heading';
+import sectionList from '../data/section';
 
 const AboutMe = () => {
   const ref=useRef(null)
@@ -12,9 +14,12 @@ const AboutMe = () => {
     visible : {opacity :1, y:0, transition : {duration:1.5,ease:'easeInOut'}}
   }
   return (
-    
+    <>
+    <Heading icon={sectionList[Section.AboutMe].icon} title={sectionList[Section.AboutMe].title} />
+     
     <motion.div id={Section.AboutMe} className='mx-[4rem] my-[6rem] h-auto grid gap-12 md:grid-cols-4 place-content-center'
      initial='hidden' variants={containerVariants} ref={ref} animate={isInView ? 'visible':'hidden'}>
+
      <div className='relative h-[25rem] md:h-auto lg:h-auto col-span-2  lg:col-span-1 md:block '>
                 <Image src='/beach2.jpg' fill alt='Me' sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw,33vw" className='object-cover md:object-cover lg:object-contain'   />
             </div>      
@@ -39,6 +44,7 @@ const AboutMe = () => {
 </div>
 
         </motion.div>
+        </>
   )
 }
 

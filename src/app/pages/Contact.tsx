@@ -7,6 +7,8 @@ import { MdOutlineMail } from 'react-icons/md';
 import { FiPhone } from 'react-icons/fi';
 import { GrLocation } from 'react-icons/gr';
 import {motion} from 'framer-motion'
+import sectionList from '../data/section';
+import Heading from '../components/Heading';
 type FormData = {
   name : string,
   email : string,
@@ -30,9 +32,12 @@ const [data,setData] = useState<FormData>({
 
 }
   return (
-    <div id={Section.Contact} className='bg-gray-300 lg:my-8 lg:mx-12 flex flex-col lg:flex-row gap-12 min-h-screen place-content-center dark:text-white '>
+    <>
+    <Heading icon={sectionList[Section.Contact].icon} title={sectionList[Section.Contact].title} /> 
+    <div id={Section.Contact} className='bg-gray-300  lg:my-8 lg:mx-12 flex flex-col lg:flex-row gap-12 min-h-screen place-content-center dark:text-white '>
+  
   <form onSubmit={handleSubmit} className=' dark:text-white overflow-hidden text-black flex flex-col px-4 justify-center gap-6 w-full lg:w-3/5 '>
-    <h1 className='text-3xl lg:text-6xl text-center  bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] inline-block text-transparent bg-clip-text mt-4 mb-2 '>Let&apos;s Get In Touch</h1>
+    <h1 className='text-4xl lg:text-6xl font-bold text-center  bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] inline-block text-transparent bg-clip-text mt-4 mb-2 '>Let&apos;s Get In Touch</h1>
     <motion.input
       required  whileFocus={{ scale: 1.05 }} transition={{ duration: 0.3 }}
       className='py-2 px-4 mx-2 rounded-xl outline-none dark:bg-black focus:bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] transition-colors '
@@ -71,7 +76,8 @@ const [data,setData] = useState<FormData>({
       </span>
     </button>
     <div className='flex flex-col  gap-6 flex-wrap overflow-hidden'>
-  <h1 className='prose text-3xl  dark:prose-invert font-bold bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] text-transparent bg-clip-text'>Contact Info</h1>
+  <h1 className='prose text-3xl  dark:prose-invert font-bold bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] 
+  text-transparent bg-clip-text'>Contact Info</h1>
   <div className='flex flex-col justify-between gap-4 md:flex-row md:gap-6'>
     <div className='flex gap-4 items-center'>
     <span className='rounded-full border-2  p-3 dark:text-black text-white bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] hover:rotate-45 hover:scale-110 '>
@@ -111,9 +117,10 @@ const [data,setData] = useState<FormData>({
       alt='me'
       layout="fill"
       objectFit="cover"
-    />
+     />
   </div>
 </div>
+</>
 
     
     )

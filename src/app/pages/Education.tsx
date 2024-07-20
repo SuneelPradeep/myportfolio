@@ -6,6 +6,8 @@ import { Section } from '../types/Sections';
 import Tippy from '@tippyjs/react';
 import { MdMoreHoriz } from 'react-icons/md';
 import { useAnimation,motion, useInView } from 'framer-motion';
+import sectionList from '../data/section';
+import Heading from '../components/Heading';
 
 const DISPLAY_SIZE = 3;
 type Edu = {
@@ -91,8 +93,9 @@ type EduProps ={
     const [showMore,setShowMore] = useState(EducationData.length > DISPLAY_SIZE ? false : true) 
    
     return (
-      <div id={Section.Education}>
-       <div className="flex flex-col mx-6 my-6"  >
+      <div id={Section.Education} className='my-6 mx-6 lg:mx-12'>
+        <Heading icon={sectionList[Section.Education].icon} title={sectionList[Section.Education].title} />
+       <div className="flex flex-col "  >
         {EducationData.filter((_,index)=> (showMore ? true: index <DISPLAY_SIZE)).
         map((data,id) =>(
           <EducationComponent key={data.id} data={data} isFirst={id===0} isLast={id===2}  />

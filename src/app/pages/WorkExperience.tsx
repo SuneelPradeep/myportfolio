@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { FaLocationArrow } from 'react-icons/fa';
 import { useAnimation,motion, useInView } from 'framer-motion'
 import React, { useEffect, useRef ,useState} from 'react'
+import sectionList from '../data/section';
+import Heading from '../components/Heading';
 
 type WorkExp = {
     id:number,
@@ -117,7 +119,8 @@ const WorkExperienceComp : React.FC<WorkProps> = ({data,isFirst,isLast}) =>
   const WorkExperience = () => {
     const [showMore, setShowMore] = useState(workexps.length > DISPLAY_SIZE ? false : true);
     return (
-      <div id="work-experience" className='mx-12 my-8'>
+      <div id={Section.WorkExperience} className=' mx-6 lg:mx-12 my-6'>
+        <Heading icon={sectionList[Section.WorkExperience].icon} title={sectionList[Section.WorkExperience].title}  />
         <div className="flex flex-col">
           {workexps.filter((_, index) => (showMore ? true : index < DISPLAY_SIZE)).map((data, id) => (
             <WorkExperienceComp key={data.id} data={data} isFirst={id === 0} isLast={id === 2} />
@@ -125,7 +128,7 @@ const WorkExperienceComp : React.FC<WorkProps> = ({data,isFirst,isLast}) =>
         </div>
         {!showMore && (
           <Tippy content={`Show ${workexps.length - DISPLAY_SIZE} More`} placement='right'>
-            <div className="cursor-pointer mt-4" onClick={() => setShowMore(true)}>
+            <div className="cursor-pointer mt-4 dark:text-white text-black" onClick={() => setShowMore(true)}>
               <MdMoreHoriz size={24} />
             </div>
           </Tippy>

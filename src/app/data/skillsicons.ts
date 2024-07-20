@@ -1,3 +1,4 @@
+
 export const skillicons = [
     {id: 1, name:"ReactJS", icon : "https://cdn.icon-icons.com/icons2/2699/PNG/512/reactjs_logo_icon_170805.png"},
     { id:2, name : "NodeJS", icon : "https://cdn.icon-icons.com/icons2/2699/PNG/512/nodejs_logo_icon_168945.png"},
@@ -23,3 +24,4 @@ export const skillicons = [
 ]
 // react native // https://toppng.com/uploads/preview/react-native-svg-transformer-allows-you-import-svg-aperture-science-innovators-logo-11562851994zqcpwozsvy.png
 // ant design https://iconduck.com/icons/93960.png
+
