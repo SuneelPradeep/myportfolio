@@ -33,7 +33,7 @@ const Skills = () => {
    <Heading icon={sectionList[Section.Skills].icon} title={sectionList[Section.Skills].title} /> 
     <div className=" border-t border-b border-gray-200 dark:border-gray-500  py-4 overflow-hidden">
     <motion.div 
-        animate="animate" className='flex space-x-8 items-center w-[1200%] lg:w-[450%]  md:w-[650%]'
+        animate="animate" className='flex space-x-8 items-center w-[1300%] lg:w-[450%]  md:w-[650%]'
         variants={marqueeVariants}
        
       >     
