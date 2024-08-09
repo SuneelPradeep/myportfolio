@@ -2,7 +2,7 @@ import React from 'react'
 interface Button {
   type : 'button' | 'submit' | 'reset';
   text : string;
-  onClick : () => void;
+  onClick? : () => void;
   disabled : boolean
 }
 const CustomButton : React.FC<Button> = ({type,text,onClick,disabled}) => {
