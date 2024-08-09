@@ -1,14 +1,18 @@
-import Image from "next/image";
-import Header from "./pages/Header";
-import Ingredients from "./components/Ingredients";
 import NoSSR from "./components/NoSSR";
 import Navigation from "./components/Navigation";
-import MouseFollower from "./components/MouseFollower";
-import AboutMe from "./pages/AboutMe";
-import WorkExperience from "./pages/WorkExperience";
-import Education from "./pages/Education";
-import Contact from "./pages/Contact";
-import Skills from "./pages/Skills";
+import dynamic from "next/dynamic";
+
+const MouseFollower = dynamic(()=> import('./components/MouseFollower'))
+const Header = dynamic(()=> import('./pages/Header'),{ loading : ()=> <p> Loading ...</p>})
+const AboutMe = dynamic(()=> import('./pages/AboutMe'))
+const WorkExperience = dynamic(()=> import('./pages/WorkExperience'))
+const Education = dynamic(()=> import('./pages/Education'))
+const Contact = dynamic(()=> import('./pages/Contact'))
+const Skills = dynamic(()=> import('./pages/Skills'))
+const Languages = dynamic(()=> import('./pages/Languages'))
+const Resume = dynamic(()=> import('./pages/Resume'))
+const Projects = dynamic(()=> import('./pages/Projects'))
+
 
 export default function Home() {
   return (
@@ -16,11 +20,16 @@ export default function Home() {
        <MouseFollower />
       <Header />
       <AboutMe />
-      <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  gap-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  gap-12">
         <WorkExperience />
         <Education />
         </div> 
+        <Projects />
         <Skills />
+        
+        <Languages />
+        <Resume />
+       
         <Contact />
 
     

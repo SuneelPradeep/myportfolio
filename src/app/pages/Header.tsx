@@ -20,7 +20,7 @@ const Header = () => {
          </NoSSR>
 
          <Image src='/logo2.png' width={550} height={140} alt='Suneel Pradeep' priority />
-         <Ingredients />
+         <Ingredients /> 
          <Profiles />
         </div>
   )

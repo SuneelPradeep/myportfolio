@@ -6,15 +6,15 @@ export enum Section {
 // "Blog" = "blog",
 // "Certifications" = "certifications",
 "Education" = "education",
-// "Languages" = "languages",
+"Languages" = "languages",
 // "Philantrophy" = "philantrophy",
-// "Projects" = "projects",
+"Projects" = "projects",
 "Skills" = "skills",
 "WorkExperience" = "work-experience",
 // "Photography" = "photography",
 // "Music" = "music",
 // "Designs" = "designs",
-// "Resume" = "resume",
+"Resume" = "resume",
 "Contact" = "contact",
 // "AboutRotW" = "aboutrotw",
 }
@@ -45,7 +45,7 @@ export type Project = {
     summary: string;
     tags: string[];
     link?: {
-        web?: string;
+        url?: string;
         github?: string;
 };
 };

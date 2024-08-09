@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { skillicons } from '../data/skillsicons';
+import {skillicons } from '../data/skillslangicons'
 import Image from 'next/image';
 import { motion} from "framer-motion" 
 import { Section } from '../types/Sections';
@@ -44,7 +44,7 @@ const Skills = () => {
                   src={i.icon} 
                   alt={i.name} 
                   layout="fill"
-                  objectFit="contain" 
+                  objectFit="contain"  
                   
                 />
               </div>
@@ -55,7 +55,7 @@ const Skills = () => {
       </motion.div>
   
   </div>
-  </div>
+  </div> 
   );
 };
 

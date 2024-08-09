@@ -59,7 +59,7 @@ const WorkExperienceComp : React.FC<WorkProps> = ({data,isFirst,isLast}) =>
 {
    const [moresummary,setMoreSummary] = useState(data.summary.length>200)
    const ref=useRef(null)
-   const isinView = useInView(ref)
+   const isinView =  useInView(ref, { once: true });
    const controls = useAnimation()
    useEffect(()=>{
      const sequence = async()=>{
@@ -80,14 +80,14 @@ const WorkExperienceComp : React.FC<WorkProps> = ({data,isFirst,isLast}) =>
       <motion.div
         className='flex group flex-col overflow-hidden mb-4'
         ref={ref}
-        initial={{ x: -100, y: 20, opacity: 0 }}
+        initial={{ x: -50, y: 20, opacity: 0 }}
         animate={controls}
       >
         <div className={`ml-1 w-1 flex-shrink-0 bg-neutral-500/25 ${isFirst ? 'rounded-t' : ''} ${isLast ? 'rounded-b' : ''}`} />
         <div className="ml-2 mt-4 flex-shrink-0 relative w-3 h-3 rounded-full" />
         <div className="mt-4 ml-8 grid gap-2 pb-2">
           <div className="relative w-full sm:w-[100px] h-auto rounded-lg">
-            <Image src={data.logo} width={100} height={40} alt={data.name} className='object-contain' />
+            <Image src={data.logo} width={100} height={40} alt={data.name} objectFit="contain"  />
           </div>
           <div>
             <h3>

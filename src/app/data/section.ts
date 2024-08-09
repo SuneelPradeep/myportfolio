@@ -22,18 +22,18 @@ const sectionList :SectionMap = {
         icon: FaTools,
         title: "Skills",
       },
-      // [Section.Projects]: {
-      //   icon: FaDev,
-      //   title: "Projects",
-      // },
+      [Section.Projects]: {
+        icon: FaDev,
+        title: "Projects",
+      },
     //   [Section.Blog]: {
     //     icon: MdBook,
     //     title: "Blog",
     //   },
-      // [Section.Languages]: {
-      //   icon: RiSpeakFill,
-      //   title: "Languages",
-      // },
+      [Section.Languages]: {
+        icon: RiSpeakFill,
+        title: "Languages",
+      },
       // [Section.Achievements]: {
       //   icon: FaAward,
       //   title: "Achievements",
@@ -58,10 +58,10 @@ const sectionList :SectionMap = {
     //     icon: FaPaintBrush,
     //     title: "Designs",
     //   },
-      // [Section.Resume]: {
-      //   icon: FaFilePdf,
-      //   title: "Resume",
-      // },
+      [Section.Resume]: {
+        icon: FaFilePdf,
+        title: "Resume",
+      },
       [Section.Contact]: {
         icon: FaPaperPlane,
         title: "Contact",

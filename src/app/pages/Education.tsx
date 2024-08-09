@@ -54,8 +54,9 @@ type EduProps ={
   };
   const EducationComponent : React.FC<EduProps> = ({data,isFirst,isLast}) => {
     const ref=useRef(null)
-    const isinView = useInView(ref)
+    const isinView = useInView(ref, { once: true });
     const controls = useAnimation()
+    
     useEffect(()=>{
       const sequence = async()=>{
        await controls.start((i)=>({
@@ -69,12 +70,12 @@ type EduProps ={
       
     },[controls,isinView])
     return(
-      <motion.div className='flex group flex-col overflow-hidden mb-4' ref={ref} animate={controls} initial={{x:100, y:-20, opacity:0 }} >
+      <motion.div className='flex group flex-col overflow-hidden mb-4' ref={ref} animate={controls} initial={{x:50, y:-20, opacity:0 }} >
       <div className={`ml-1 w-1 flex-shrink-0 bg-neutral-500/25 ${isFirst ? 'rounded-t' : ''} ${isLast ? 'rounded-b' : ''}`} />
      <div className="ml-2 mt-8 flex-shrink-0 relative w-3 h-3 rounded-full" />
      <div className="mt-5 ml-8 grid gap-2 pb-2">
      <div className="relative  rounded-lg ">
-      <Image src={data.logo} width={60} height={60} alt={data.institution} className='bg-white object-contain' />
+      <Image src={data.logo} width={60} height={60} alt={data.institution} className='object-contain bg-white' />
       </div>
       <div className=''>
       <h3> <span className='text-lg font-bold prose dark:prose-invert '> {data.institution}  </span> {" "}

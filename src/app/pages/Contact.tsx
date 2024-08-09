@@ -9,6 +9,7 @@ import { GrLocation } from 'react-icons/gr';
 import {motion} from 'framer-motion'
 import sectionList from '../data/section';
 import Heading from '../components/Heading';
+import CustomButton from '../components/CustomButton'
 type FormData = {
   name : string,
   email : string,
@@ -34,10 +35,10 @@ const [data,setData] = useState<FormData>({
   return (
     <>
     <Heading icon={sectionList[Section.Contact].icon} title={sectionList[Section.Contact].title} /> 
-    <div id={Section.Contact} className='bg-gray-300  lg:my-8 lg:mx-12 flex flex-col lg:flex-row gap-12 min-h-screen place-content-center dark:text-white '>
+    <div id={Section.Contact} className='bg-gray-300 lg:my-8 lg:mx-12 flex flex-col lg:flex-row gap-12 min-h-screen place-content-center dark:text-white '>
   
   <form onSubmit={handleSubmit} className=' dark:text-white overflow-hidden text-black flex flex-col px-4 justify-center gap-6 w-full lg:w-3/5 '>
-    <h1 className='text-4xl lg:text-6xl font-bold text-center  bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] inline-block text-transparent bg-clip-text mt-4 mb-2 '>Let&apos;s Get In Touch</h1>
+    <h1 className='text-4xl lg:text-6xl font-bold text-center bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] inline-block text-transparent bg-clip-text mt-4 mb-2 '>Let&apos;s Get In Touch</h1>
     <motion.input
       required  whileFocus={{ scale: 1.05 }} transition={{ duration: 0.3 }}
       className='py-2 px-4 mx-2 rounded-xl outline-none dark:bg-black focus:bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] transition-colors '
@@ -63,18 +64,7 @@ const [data,setData] = useState<FormData>({
       value={data.message}
       onChange={handleData}
     />
-    <button
-      type='submit'
-      disabled={submitting}
-      className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-xl"
-    >
-      <span className="w-1/2  items-center h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6]
-       group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute rounded-xl" />
-      <span className="relative px-7 py-3 transition-all ease-out dark:bg-gray-900 w-1/2 bg-white dark:text-white text-black rounded-xl group-hover:bg-opacity-0">
-         <span className="relative">Get in Touch</span> 
-        
-      </span>
-    </button>
+    <CustomButton text='Get in Touch' disabled={submitting} type="submit" />
     <div className='flex flex-col  gap-6 flex-wrap overflow-hidden'>
   <h1 className='prose text-3xl  dark:prose-invert font-bold bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] 
   text-transparent bg-clip-text'>Contact Info</h1>
@@ -121,39 +111,7 @@ const [data,setData] = useState<FormData>({
   </div>
 </div>
 </>
-
-    
-    )
+ )
 }
 
 export default Contact
-
-{/* <div id={Section.Contact} className='bg-gray-300  my-[4rem] lg:mx-[6rem] md:mx-[6rem] flex gap-12 min-h-screen place-content-center '>
-    
-    <form onSubmit={handleSubmit} className='dark:text-white text-black flex flex-col px-4 justify-center gap-6 w-full'>
-       <h1 className='text-6xl text-center'>Let's Get In Touch</h1>
-      <input required className='py-2 px-4 rounded-xl outline-none dark:bg-black ' placeholder='enter name' name='name' value={data.name} onChange={handleData} />
-      <input  required className='py-2 px-4 rounded-xl outline-none dark:bg-black 'placeholder='enter email' name='email' value={data.email} onChange={handleData} />
-       <textarea  required className='py-2 px-4 rounded-xl outline-none dark:bg-black ' placeholder='write your message here' name='message' value={data.message} onChange={handleData} />
-       
-       <button type='submit' disabled={submitting} className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-xl">
-                <span className="w-[18%] rounded-xl h-full bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] group-hover:from-[#ff00c6] group-hover:via-[#ff5478] group-hover:to-[#ff8a05] absolute" />
-                <span className="relative px-6 py-3 transition-all ease-out dark:bg-gray-900 text-black bg-white dark:text-white rounded-xl group-hover:bg-opacity-0 ">
-                  <span className="relative "> Get in Touch </span>
-                </span>
-              </button>
-           
-      </form> 
-
-      <div className="w-[50%] relative text-black dark:text-white ">
-                <Image 
-                  src='/hyd.jpg' 
-                  alt='me'
-                  layout="fill"
-                  objectFit="fill" 
-                  
-                />
-              </div>
-     
-           
-    </div> */}

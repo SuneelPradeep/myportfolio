@@ -20,8 +20,8 @@ const AboutMe = () => {
     <motion.div id={Section.AboutMe} className='mx-[4rem] my-[6rem] h-auto grid gap-12 md:grid-cols-4 place-content-center'
      initial='hidden' variants={containerVariants} ref={ref} animate={isInView ? 'visible':'hidden'}>
 
-     <div className='relative h-[25rem] md:h-auto lg:h-auto col-span-2  lg:col-span-1 md:block '>
-                <Image src='/beach2.jpg' fill alt='Me' sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw,33vw" className='object-cover md:object-cover lg:object-contain'   />
+     <div className='relative h-[25rem] md:h-auto lg:h-auto col-span-2  lg:col-span-1  '>
+                <Image src='/beach2.jpg' fill alt='Me' sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw,33vw"  className="md:block object-cover md:object-cover lg:object-contain" />
             </div>      
             <div className=' col-span-2 lg:col-span-3 max-w-full prose prose-md md:prose-neutral dark:prose-invert'>
   <p>Hey there!</p>

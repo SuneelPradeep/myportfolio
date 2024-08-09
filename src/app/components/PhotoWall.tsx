@@ -39,11 +39,11 @@ const PhotoWall : React.FC<Props> = ({size = 512,delay=0.8}) => {
          style={{animationDelay : `${index *0.5 +0.5}s`,width :`${size/4}px`,height:`${size}px`}} 
          onMouseEnter={(e)=> e.currentTarget.style.width = `${size/2}px`} 
          onMouseLeave={(e)=> e.currentTarget.style.width = `${size/4}px`} >
-            <Image fill priority src={photo} alt='SuneelPradeep'
-             sizes='(max-width:768px) 100vw, (max-width:1200px) 50vw,33vw'
-             className={`object-cover ${index === 0 ? "rounded-l" : ""} 
-             ${index === photos.length - 1 ? "rounded-r" : ""}`}
+             <Image fill priority src={photo} alt='SuneelPradeep'
+             sizes='(max-width:768px) 100vw, (max-width:1200px) 50vw,33vw'   className={`object-cover ${index === 0 ? "rounded-l" : ""}${index === photos.length - 1 ? "rounded-r" : ""}`}          
                />
+          
+           
         </motion.div>
     ))}
         </div>

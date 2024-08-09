@@ -14,6 +14,9 @@ const nextConfig = {
                 hostname: 'cdn.icon-icons.com',
                 
               },
+              {protocol:'https',
+                hostname:"banner2.cleanpng.com"
+              }
 
           ],
     }
