@@ -1,6 +1,11 @@
 import React from 'react'
-
-const CustomButton = ({type,text,onClick,disabled}) => {
+interface Button {
+  type : 'button' | 'submit' | 'reset';
+  text : string;
+  onClick : () => void;
+  disabled : boolean
+}
+const CustomButton : React.FC<Button> = ({type,text,onClick,disabled}) => {
   return (
     <button
     type={type}
