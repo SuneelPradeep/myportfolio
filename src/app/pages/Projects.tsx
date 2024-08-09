@@ -95,7 +95,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
 
 const Projects = () => {
   const controls = useAnimation();
-  const ref= useRef(null);
+  const ref= useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref,{once:true})
 
   useEffect(() => {
