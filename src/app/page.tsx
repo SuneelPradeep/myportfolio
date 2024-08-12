@@ -12,7 +12,7 @@ const Skills = dynamic(()=> import('./pages/Skills'))
 const Languages = dynamic(()=> import('./pages/Languages'))
 const Resume = dynamic(()=> import('./pages/Resume'))
 const Projects = dynamic(()=> import('./pages/Projects'))
-
+const Photography = dynamic(()=> import ('./pages/Photography'))
 
 export default function Home() {
   return (
@@ -29,6 +29,7 @@ export default function Home() {
         
         <Languages />
         <Resume />
+        <Photography />
        
         <Contact />
 

@@ -14,10 +14,38 @@ import Tippy from '@tippyjs/react'
 
 
 const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
+  const controls = useAnimation();
+  const ref= useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref,{once:true})
+
+  useEffect(() => {
+    const sequence = async () => {
+      for (let i = 0; i < projectList.length; i++) {
+        await controls.start((index) => ({
+          opacity: 1,
+          x: 0,
+          transition: { duration: 1, delay: index * 0.5, ease: "easeInOut" }
+        }));
+      }
+    };
+    if(isInView) {
+        sequence()
+      }
+  }, [controls,isInView]);
+
   const tagstring = tags.map((i : string)=> `#${i}`).join(" ,")
+
   return (
-    <motion.div
-      className='w-full h-full border-2 border-gray-500 rounded-lg '
+    <motion.div ref={ref} className='w-full h-full border-2 border-gray-500 rounded-lg '
+    initial={{ opacity: 0, x: -50 }}
+    animate={controls}
+    custom={id} 
+    >
+
+    
+    <motion.div 
+    // animate={controls}
+      
       initial={{ opacity: 0, x: -50 ,y: 50}}
       animate={{ opacity: 1, x: 0 ,y:0}}
        transition={{ duration: 1, ease: "easeOut" }}
@@ -26,7 +54,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
       <motion.div
         initial={{ opacity: 0, x: 50, y: 50}}
         animate={{ opacity: 1, x: 0 ,y:0}}
-        transition={{ duration: 1, delay: 1, ease: "easeInOut" }}
+        transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
          className="mb-4 place-items-center relative rounded shadow-lg overflow-hidden hover:opacity-60 " 
           style={{ height: '200px' }}>
           <Link
@@ -52,7 +80,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
         className="text-2xl font-semibold mb-2"
         initial={{ opacity: 0, x: -50,y: 50  }}
         animate={{ opacity: 1, x: 0 ,y:0}}
-        transition={{ duration: 1, delay: 1.5, ease: "easeInOut" }}
+        transition={{ duration: 1, delay: 2.25, ease: "easeInOut" }}
       >
         {name}
       </motion.h3>
@@ -60,7 +88,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
         className="text-gray-700 prose prose-neutral-50  prose-sm mb-2 dark:prose-invert dark:text-gray-300"
         initial={{ opacity: 0, x: 50, y: 50 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
+        transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
       >
         {summary}
       </motion.p>
@@ -68,7 +96,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
         className="text-xs leading-relaxed font-bold"
         initial={{ opacity: 0, x: -50, y: 50 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
+        transition={{ duration: 1, delay: 2.75, ease: "easeInOut" }}
       >
         {tagstring}
       </motion.p>
@@ -88,45 +116,25 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
       
       </div>
     </motion.div>
+    </motion.div>
   );
 };
 
 
 
 const Projects = () => {
-  const controls = useAnimation();
-  const ref= useRef<HTMLDivElement | null>(null);
-  const isInView = useInView(ref,{once:true})
-
-  useEffect(() => {
-    const sequence = async () => {
-      for (let i = 0; i < projectList.length; i++) {
-        await controls.start((index) => ({
-          opacity: 1,
-          x: 0,
-          transition: { duration: 1, delay: index * 0.5, ease: "easeInOut" }
-        }));
-      }
-    };
-    if(isInView) {
-        sequence()
-      }
-  }, [controls,isInView]);
+  
  
   return (
-     <div ref={ref} id={Section.Projects} className="mx-6 lg:mx-16 my-6">
+     <div  id={Section.Projects} className="mx-6 lg:mx-16 my-6">
       <Heading icon={sectionList[Section.Projects].icon} title={sectionList[Section.Projects].title}  />
       <div  className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {projectList.map((proj, index) => (
-          <motion.div
+          <div
             key={index}
-
-            initial={{ opacity: 0, x: -50 }}
-            animate={controls}
-            custom={index}
           >
             <Card
-              id={proj.id}
+              id={proj.id} 
               name={proj.name}
               summary={proj.summary}
               image={proj.image}
@@ -134,7 +142,7 @@ const Projects = () => {
               link ={proj.link}
             />
             
-          </motion.div>
+          </div>
         ))}
       </div>
       </div>

@@ -46,10 +46,10 @@ const sectionList :SectionMap = {
     //     icon: BiDonateHeart,
     //     title: "Philantrophy",
     //   },
-      // [Section.Photography]: {
-      //   icon: MdCamera,
-      //   title: "Photography",
-      // },
+      [Section.Photography]: {
+        icon: MdCamera,
+        title: "Photography",
+      },
       // [Section.Music]: {
       //   icon: MdMusicNote,
       //   title: "Music",
