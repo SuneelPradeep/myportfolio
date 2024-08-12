@@ -11,13 +11,11 @@ const Photography = () => {
      
       <div className='mx-6 lg:mx-12 my-8 '>
      
-        {/* eslint-disable */}
         <iframe src="//lightwidget.com/widgets/f1e05bbf556b5d50819ddc4b16173409.html" scrolling="no"
-         allowtransparency="true"
+        //  allowtransparency="true"
 className="lightwidget-widget" style={{width:'100%',border:0,overflow:'hidden'}}>
 
          </iframe>
-         {/* eslint-disable */}
        </div>
     </div>
   )
