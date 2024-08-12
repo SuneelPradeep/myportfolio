@@ -44,9 +44,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
 
     
     <motion.div 
-    // animate={controls}
-      
-      initial={{ opacity: 0, x: -50 ,y: 50}}
+    initial={{ opacity: 0, x: -50 ,y: 50}}
       animate={{ opacity: 1, x: 0 ,y:0}}
        transition={{ duration: 1, ease: "easeOut" }}
     >
@@ -54,7 +52,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
       <motion.div
         initial={{ opacity: 0, x: 50, y: 50}}
         animate={{ opacity: 1, x: 0 ,y:0}}
-        transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
+        transition={{ duration: 1, delay: 4, ease: "easeInOut" }}
          className="mb-4 place-items-center relative rounded shadow-lg overflow-hidden hover:opacity-60 " 
           style={{ height: '200px' }}>
           <Link
@@ -80,7 +78,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
         className="text-2xl font-semibold mb-2"
         initial={{ opacity: 0, x: -50,y: 50  }}
         animate={{ opacity: 1, x: 0 ,y:0}}
-        transition={{ duration: 1, delay: 2.25, ease: "easeInOut" }}
+        transition={{ duration: 1, delay: 4.25, ease: "easeInOut" }}
       >
         {name}
       </motion.h3>
@@ -88,7 +86,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
         className="text-gray-700 prose prose-neutral-50  prose-sm mb-2 dark:prose-invert dark:text-gray-300"
         initial={{ opacity: 0, x: 50, y: 50 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 1, delay: 2.5, ease: "easeInOut" }}
+        transition={{ duration: 1, delay: 4.5, ease: "easeInOut" }}
       >
         {summary}
       </motion.p>
@@ -96,7 +94,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
         className="text-xs leading-relaxed font-bold"
         initial={{ opacity: 0, x: -50, y: 50 }}
         animate={{ opacity: 1, x: 0, y: 0 }}
-        transition={{ duration: 1, delay: 2.75, ease: "easeInOut" }}
+        transition={{ duration: 1, delay: 4.75, ease: "easeInOut" }}
       >
         {tagstring}
       </motion.p>
@@ -104,7 +102,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
       {link && (
         <motion.div initial={{ opacity: 0, x: 50, y: 50 }}
         animate={{ opacity: 1, x: 0, y: 0 }} className='flex justify-start gap-8 mt-4 mb-1'
-        transition={{ duration: 1, delay: 3, ease: "easeInOut" }}>
+        transition={{ duration: 1, delay: 5, ease: "easeInOut" }}>
         <Tippy content={<p className='dark:text-white' ><small>Website</small></p>} placement='bottom'>
         <Link href={link.url || '#'}><BiLinkExternal fontSize={18} /></Link>
           </Tippy>
