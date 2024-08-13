@@ -38,10 +38,10 @@ const sectionList :SectionMap = {
       //   icon: FaAward,
       //   title: "Achievements",
       // },
-      // [Section.Certifications]: {
-      //   icon: AiFillSafetyCertificate,
-      //   title: "Certifications",
-      // },
+      [Section.Certifications]: {
+        icon: AiFillSafetyCertificate,
+        title: "Certifications",
+      },
     //   [Section.Philantrophy]: {
     //     icon: BiDonateHeart,
     //     title: "Philantrophy",

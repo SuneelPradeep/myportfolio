@@ -4,7 +4,7 @@ export enum Section {
 "AboutMe" = 'about-me',
 // "Achievements" = 'achievements',
 // "Blog" = "blog",
-// "Certifications" = "certifications",
+"Certifications" = "certifications",
 "Education" = "education",
 "Languages" = "languages",
 // "Philantrophy" = "philantrophy",
@@ -49,6 +49,14 @@ export type Project = {
         github?: string;
 };
 };
+export type Certificate = {
+  id : number;
+  name : string;
+  date : string;
+  issuer : string;
+  summary? : string;
+  link? : string;
+}
 
 
 export type Achievement = {

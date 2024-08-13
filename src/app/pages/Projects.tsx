@@ -14,6 +14,7 @@ import Tippy from '@tippyjs/react'
 
 
 const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
+
   const controls = useAnimation();
   const ref= useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref,{once:true})
@@ -60,7 +61,7 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
                 passHref
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative w-full h-full flex items-center justify-center"
+                className="relative w-full h-full flex items-center justify-center hover:opacity-60"
               >
           <Image
             src={image}
@@ -104,10 +105,10 @@ const Card :React.FC<Project>  = ({ id , name, summary, image ,tags,link}) => {
         animate={{ opacity: 1, x: 0, y: 0 }} className='flex justify-start gap-8 mt-4 mb-1'
         transition={{ duration: 1, delay: 5, ease: "easeInOut" }}>
         <Tippy content={<p className='dark:text-white' ><small>Website</small></p>} placement='bottom'>
-        <Link href={link.url || '#'}><BiLinkExternal fontSize={18} /></Link>
+        <Link href={link.url || ''}><BiLinkExternal fontSize={18} /></Link>
           </Tippy>
            <Tippy content={<p className='dark:text-white' ><small>GitHub</small></p>} placement='bottom'>
-            <Link href={link.github || '#'}> <FaGithub fontSize={18} /></Link>
+            <Link href={link.github || ''}> <FaGithub fontSize={18} /></Link>
            </Tippy>
            </motion.div>
       )}

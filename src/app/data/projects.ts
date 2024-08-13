@@ -1,4 +1,4 @@
-import {Project} from '../types/Sections'
+import {Project, Certificate} from '../types/Sections'
 export const projectList : Project[] = [
     { 
         id: 1,
@@ -76,6 +76,80 @@ backend to connect to MongoDB to send and retrieve data`,
             github : "https://github.com/SuneelPradeep/Uber_clone",
               },
         },
+
+]
+
+export const certificationList : Certificate[] =[
+   { id : 1,
+      name : 'Top 5% Front End Engineer Certificate',
+      issuer : 'Pro5.ai',
+      date : "13th July 2024",
+      link : "https://drive.google.com/file/d/1ywwbVnxdNl89AByEZv9lYC0J0CfD-RJu/view?usp=sharing"
+
+   },
+   { id : 2,
+    name : 'Get in-depth understanding of Kafka and Zookeeper masterclass',
+    issuer : 'Scaler',
+    date : "July 2024",
+    link : "https://moonshot.scaler.com/s/sl/9VSo1qDA4f"
+
+ },
+ { id : 3,
+    name : 'Programming for Everybody',
+    issuer : 'Coursera(University of Michigan)',
+    date : "July-Oct 2018",
+    link : "https://coursera.org/share/1917299d4823fdcd94fc50df211bbc50"
+
+ },
+ { id : 4,
+    name : 'Using python to access web data',
+    issuer : 'Coursera(University of Michigan)',
+    date : "April 2019",
+    link : "https://coursera.org/share/c1e250aaa86e094cea3f4e1b7d7d3f32"
+
+ },
+ { id : 5,
+    name : 'Introduction to IOT',
+    issuer : 'NPTEL',
+    date : "July-Oct 2018",
+    link : "https://drive.google.com/file/d/1eZhpiMbqVPlg3Jau7czD928c5to6MW7R/view?usp=sharing"
+
+ },
+ { id : 6,
+    name : 'Usable Security',
+    issuer : 'Coursera(University of Mariyland)',
+    date : "May 2019",
+    link : "https://coursera.org/share/6d2cc49c70c53135028edda2394c9674"
+
+ },
+ { id : 7,
+    name : 'Programming, DS,Algo using Python',
+    issuer : 'NPTEL',
+    date : "Aug-Sep 2018",
+    link : "https://drive.google.com/file/d/1edsn2nKEx7_gZp0vZ0CTb21Py8qbxHfs/view?usp=sharing"
+
+ },
+ { id : 8,
+    name : 'Using databases with Python',
+    issuer : 'Coursera(University of Michigan)',
+    date : "May 2019",
+    link : "https://coursera.org/share/2e883307018ed0a994c727606d20b52d"
+
+ },
+ { id : 9,
+    name : 'Pyton data structures',
+    issuer : 'Coursera(University of Michigan)',
+    date : "4th Dec 2018",
+    link : "https://coursera.org/share/d7752bb3ee96ba351f532240ba55bf66"
+
+ },
+ { id : 10,
+    name : 'INQUIZATE',
+    issuer : 'Delhi School of Management(DSM)',
+    date : " 2017",
+    link : "https://drive.google.com/file/d/1ejLAgIgO_fVrbbJUHCcxPuqeZ0KN9EaA/view?usp=sharing"
+
+ },
 
 ]
 
