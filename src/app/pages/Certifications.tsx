@@ -46,7 +46,7 @@ const skillVariants = {
         viewport={{ once: true }}
       >
         {skills.map((skill: Certificate, index: number) => (
-          <Link href={skill.link ? skill.link : ''} target='_blank' rel="noopener noreferrer" >
+          <Link key={index} href={skill.link ? skill.link : ''} target='_blank' rel="noopener noreferrer" >
             <motion.div
             key={index}
             className="border-2 border-gray-400 p-4 rounded-xl shadow-xl hover:bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] transition-colors"
