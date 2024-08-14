@@ -47,7 +47,7 @@ const Navigation = () => {
   }
   else{
     return(
-    <nav className='fixed min-h-screen flex flex-col gap-4 items-center justify-between top-0 px-3 py-5 '>
+    <nav className='fixed min-h-screen flex flex-col gap-4 items-center justify-between top-0 px-3 py-5 text-black dark:text-white '>
         <div className='flex flex-col gap-4 items-start'>
         <Tippy content={<p className='dark:text-white' ><small>Go to Top</small></p>} placement='right'>
         <div className='cursor-pointer grayscale hover:grayscale-0' onClick={goToTop}>
