@@ -2,6 +2,7 @@ import NoSSR from "./components/NoSSR";
 import Navigation from "./components/Navigation";
 import dynamic from "next/dynamic";
 
+
 const MouseFollower = dynamic(()=> import('./components/MouseFollower'))
 const Header = dynamic(()=> import('./pages/Header'),{ loading : ()=> <p> Loading ...</p>})
 const AboutMe = dynamic(()=> import('./pages/AboutMe'))
@@ -31,7 +32,7 @@ export default function Home() {
         
         <Languages />
         
-         {/* <Photography /> */}
+         <Photography />
         <Certifications />
         <Resume /> 
         <Contact />

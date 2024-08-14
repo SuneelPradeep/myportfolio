@@ -20,7 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" >
-      <head><Script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></Script></head>
+      {/* <head><Script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></Script></head> */}
+      <head><Script  src="https://snapwidget.com/js/snapwidget.js"></Script></head>
       <ThemeProvider>
         
       <body className={Albert.className}>{children}</body>
