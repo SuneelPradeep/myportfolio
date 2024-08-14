@@ -28,13 +28,11 @@ export default function Home() {
         <Education />
         </div> 
         <Projects />
-        <Skills />
-        
-        <Languages />
-        
-         <Photography />
         <Certifications />
-        <Resume /> 
+        <Skills />
+        <Languages />
+         <Resume /> 
+        <Photography />
         <Contact />
 
     
