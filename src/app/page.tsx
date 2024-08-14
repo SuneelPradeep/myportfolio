@@ -19,7 +19,8 @@ export default function Home() {
   return (
        <div className="place-content-center place-items-center bg-white dark:bg-black dark:text-white">
        <MouseFollower />
-      <Header />
+       
+       <Header />
       <AboutMe />
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2  gap-12">
         <WorkExperience />

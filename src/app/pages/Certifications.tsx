@@ -46,16 +46,15 @@ const skillVariants = {
         viewport={{ once: true }}
       >
         {skills.map((skill: Certificate, index: number) => (
-          <Link key={index} href={skill.link ? skill.link : ''} target='_blank' rel="noopener noreferrer" >
+          <Link key={index} href={skill.link ? skill.link : '#'} target='_blank' rel="noopener noreferrer" >
             <motion.div
-            key={index}
             className="border-2 border-gray-400 p-4 rounded-xl shadow-xl hover:bg-gradient-to-br from-[#ff8a05] via-[#ff5478] to-[#ff00c6] transition-colors"
             variants={skillVariants}
           >
             <div className='grid grid-flow-col gap-4 justify-start items-center'><PiCertificateBold  /><p className='' >{skill.name} </p></div>
             <div className='my-2 grid gap-4 grid-flow-col justify-start items-center'><FaCertificate  /><p className=''>{skill.issuer}</p></div>
             <div className='my-2 grid gap-4 grid-flow-col justify-start items-center'>
-            <Link href={skill.link ? skill.link : ''} target='_blank' rel="noopener noreferrer" ><span className='my-2 grid gap-4 grid-flow-col justify-start items-center'><FiExternalLink /> <p>Link</p></span></Link>
+            <span className='my-2 grid gap-4 grid-flow-col justify-start items-center'><FiExternalLink /> <p>Link</p></span>
               <MdOutlineDateRange />  <p>{skill.date} </p>
             </div>
           </motion.div>

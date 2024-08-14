@@ -2,9 +2,8 @@ import type { Metadata } from "next";
 import { Inter ,Albert_Sans} from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "./context/ThemeProvider";
-import Navigation from "./components/Navigation";
-import Head from "next/head";
 import Script from "next/script";
+
 
 const inter = Inter({ subsets: ["latin"] });
 const Albert  = Albert_Sans({ subsets: ["latin"] })
@@ -23,6 +22,7 @@ export default function RootLayout({
     <html lang="en" >
       <head><Script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></Script></head>
       <ThemeProvider>
+        
       <body className={Albert.className}>{children}</body>
       </ThemeProvider>
       
